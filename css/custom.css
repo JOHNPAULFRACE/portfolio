@@ -1,0 +1,116 @@
+/* Overrides on top of iPortfolio (assets/css/main.css) */
+
+/* Hero: darker scrim + shadow so text stays readable on busy backgrounds */
+.hero.section.dark-background:before {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 11, 20, 0.72) 0%,
+    rgba(4, 11, 20, 0.55) 50%,
+    rgba(4, 11, 20, 0.65) 100%
+  );
+}
+
+.hero .container .hero-title,
+.hero .container .hero-role,
+.hero .container .hero-desc,
+.hero .container .hero-desc--muted {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Match template hero title sizing when using h1 */
+.hero .hero-title {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-title {
+    font-size: 32px;
+  }
+}
+
+/* Sidebar logo: template targeted h1; we use .sitename span */
+.header .logo .sitename {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+  display: block;
+}
+
+.icon-accent {
+  color: var(--accent-color);
+}
+
+/* Hero: keep role line large; body lines readable (overrides .hero p from template) */
+.hero p.hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-top: 0;
+}
+
+.hero p.hero-desc--muted {
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+  .hero p.hero-desc {
+    font-size: 1rem;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.project-resume h4 {
+  margin-bottom: 0.35rem;
+}
+
+.project-resume .project-type {
+  font-weight: 500;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.skill-card-box {
+  border: 1px solid #dee2e6;
+}
+
+.contact-cta-box {
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: var(--surface-color);
+  border: 1px solid #dee2e6;
+  height: 100%;
+}
+
+.contact-cta-box .btn + .btn {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .contact-cta-box .btn + .btn {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .contact-cta-box .d-flex.flex-wrap {
+    justify-content: flex-start !important;
+  }
+}
